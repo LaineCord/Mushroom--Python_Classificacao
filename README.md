@@ -100,7 +100,7 @@ O modelo está predominantemente com altos Verdadeiros Positivos (TP) e Verdadei
 ## 5.3 Distribuição das Classes
 ![image](https://github.com/user-attachments/assets/5cac7bd7-5ad4-498e-8ff3-7d68e038e7d8)
 
-A distribuição de classes tem uma diferença de 3%, o que esta dentro do aceitável para o desenvolvimento de um modelo de classificação.
+A distribuição de classes tem uma diferença de 6.86%, o que esta dentro do aceitável para o desenvolvimento de um modelo de classificação.
 
 ## 5.4  Validação Cruzada
 ![image](https://github.com/user-attachments/assets/364f0963-b039-464b-87a4-9a5bbe058985)
