@@ -24,7 +24,7 @@ Características morfológicas: Tipicamente têm aneis nos estipes, os quais, na
 Fonte: https://www.inaturalist.org/taxa/58695-Lepiota
 
 # 2. Objetivo do Estudo: Classificar Cogumelos tóxicos de comestíveis
-# 3. Variáveis encontradas no Dataset¶
+# 3. Variáveis encontradas no Dataset
 ![image](https://github.com/user-attachments/assets/255257d1-a7e3-4937-902e-3229e2611045)
 
 1. cap-shape (Formato do chapéu):         bell=b,conical=c,convex=x,flat=f, knobbed=k,sunken=s
@@ -76,33 +76,46 @@ __Variaveis Target__
 
 edible=e poisonous=p
 
+# 4. Bibliotecas utilizadas
+Foram utilizadas biliotecas do pandas, numpy, seaborn, matplotlib e lightgbm.
 
-# 4. Avaliando o Modelo de Classificação
-## 4.1 Matriz Confusão
-![Sem título](https://github.com/user-attachments/assets/071e50a5-5d62-4dcc-a864-77646d0fe7eb)
+# 5. Avaliando o Modelo de Classificação
+## 5.1 Matriz Confusão
+![image](https://github.com/user-attachments/assets/44c2d856-cd07-47f5-8867-0f7201d71d5a)
+
 
 O modelo está predominantemente com altos Verdadeiros Positivos (TP) e Verdadeiros Negativos (TN) o que indica que está classificando corretamente a maioria dos casos.
 
-## 4.2 Métricas de desempenho
-![image](https://github.com/user-attachments/assets/322cdb4a-42f2-4167-81dc-515ab99360bb)
+## 5.2 Métricas de desempenho
+![image](https://github.com/user-attachments/assets/46324158-f971-43ce-89ce-4ffd336b3281)
 
-- A Acuracia(Accuracy: mede a proporção total de previsões corretas. No caso do modelo em questão, a acuracia esta em 97%, o que demonstra uma boa previsibilidade. Apesar da acuracia já indicar uma boa previsibilidade é importante análisar outras métricas para entender se, de fato, o modelo esta se comportando bem.
-- A precisão(Precision): mede a proporção de verdadeiros positivos entre todos os previstos pelo modelo, ou seja, o quão provavel é em classificar corretamente as previsões. Neste caso, o modelo demonstra uma grande capacidade, visto que esta entre 97 - 98 %.
-- A Revocação(Recall): mede a força do modelo em prever um resultado positivo. No modelo em questão, a previsão esta entre 97 - 98%, o que indica uma ótima previsibilidade.
-- F1-Score: mede o quanto a precisão e a revocação estão sendo eficientes. No caso em questão vemos uma boa eficiência entre os dois casos.
 
-## 4.3 Distribuição das Classes
+- A Acuracia(Accuracy: mede a proporção total de previsões corretas. No caso do modelo em questão, a acuracia esta em 97% em todos os casos, o que demonstra uma boa previsibilidade. Apesar da acuracia já indicar uma boa previsibilidade é importante análisar outras métricas para entender se, de fato, o modelo esta se comportando bem.  
+- A precisão(Precision): mede a proporção de verdadeiros positivos entre todos os previstos pelo modelo, ou seja, o quão provavel é em classificar corretamente as previsões. Neste caso, o modelo demonstra uma grande capacidade, visto que esta em 96%.  
+- A Revocação(Recall): mede a força do modelo em prever um resultado positivo. No modelo em questão, a previsão esta em 98%, o que indica uma ótima previsibilidade.  
+- F1-Score: mede o quanto a precisão e a revocação estão sendo eficientes. No caso em questão vemos uma boa eficiência entre os dois casos.  
+
+
+
+## 5.3 Distribuição das Classes
 ![image](https://github.com/user-attachments/assets/5cac7bd7-5ad4-498e-8ff3-7d68e038e7d8)
 
 A distribuição de classes tem uma diferença de 3%, o que esta dentro do aceitável para o desenvolvimento de um modelo de classificação.
 
-## 4.4  Validação Cruzada
+## 5.4  Validação Cruzada
 ![image](https://github.com/user-attachments/assets/364f0963-b039-464b-87a4-9a5bbe058985)
 
-## 4.5 AUC
-![image](https://github.com/user-attachments/assets/7e555bb9-0889-495a-b184-df372b566964)
+A validação cruzada tem como função testar o desempenho do modelo criado. Aqui vemos que o modelo criado está desempenhando bem, logo que a acuracia esta em 97% e o desvio padrão em 0.0029.
 
-O modelo possui uma métrica de área sob a curva (AUC) de 0.9738, correspondendo a um classificador relativamente bom, logo que quanto mais próximo de 1, melhor ele é.
+## 5.5 Curva ROC e AUC
+![image](https://github.com/user-attachments/assets/ced8dcd7-59f3-4f84-9a4c-17e36f3aca31)
+
+
+O modelo possui uma métrica de área sob a curva (AUC) entre 0.98 - 0.99, correspondendo a um classificador relativamente bom, logo que quanto mais próximo de 1, melhor ele é.
+
+# 6. Considerações Finais
+
+Foram utilizados 3 classificadores: LogisticRegression,DecisionTreeClassifier e KNeighborsClassifier. Em todos os casos houve um ótimo desempenho para todas as metricas: Accuracy, Precision, Recall e F1-Score. Também foi realizada uma validação cruzada, com uma acurácia média de 0.9794 e desvio padrão da acurácia e 0.0029. Sobre a curva ROC e AUC, também foram vistos ótimos desempenhos, logo que quanto mais proximo da esquerda e AUC mais proximo de 1, melhor desempenho ele possui. 
 
 ## 5. Fonte do DataSet
 https://archive.ics.uci.edu/dataset/73/mushroom
