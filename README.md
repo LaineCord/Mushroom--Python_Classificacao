@@ -87,7 +87,8 @@ Foram utilizadas biliotecas do pandas, numpy, seaborn, matplotlib e lightgbm.
 O modelo está predominantemente com altos Verdadeiros Positivos (TP) e Verdadeiros Negativos (TN) o que indica que está classificando corretamente a maioria dos casos.
 
 ## 5.2 Métricas de desempenho
-![image](https://github.com/user-attachments/assets/46324158-f971-43ce-89ce-4ffd336b3281)
+![image](https://github.com/user-attachments/assets/96655d73-0632-46fd-b5ac-b6282e8805fa)
+
 
 
 - A Acuracia(Accuracy: mede a proporção total de previsões corretas. No caso do modelo em questão, a acuracia esta em 97% em todos os casos, o que demonstra uma boa previsibilidade. Apesar da acuracia já indicar uma boa previsibilidade é importante análisar outras métricas para entender se, de fato, o modelo esta se comportando bem.  
