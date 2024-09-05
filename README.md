@@ -23,7 +23,7 @@ Características morfológicas: Tipicamente têm aneis nos estipes, os quais, na
 
 Fonte: https://www.inaturalist.org/taxa/58695-Lepiota
 
-# 2. Objetivo do Estudo: Classificar Cogumelos tóxicos de comestíveis
+# 2. Objetivo do Estudo: Classificar corretamente  Cogumelos tóxicos e comestíveis
 # 3. Variáveis encontradas no Dataset
 ![image](https://github.com/user-attachments/assets/255257d1-a7e3-4937-902e-3229e2611045)
 
