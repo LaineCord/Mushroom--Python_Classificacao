@@ -1,5 +1,3 @@
-# Em construção 
-
 # Mushroom
 
 # 1. Sobre o Dataset
