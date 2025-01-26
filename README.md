@@ -79,22 +79,19 @@ Foram utilizadas biliotecas do pandas, numpy, seaborn, matplotlib e lightgbm.
 
 # 5. Avaliando o Modelo de Classificação
 ## 5.1 Matriz Confusão
-![image](https://github.com/user-attachments/assets/44c2d856-cd07-47f5-8867-0f7201d71d5a)
+![image](https://github.com/user-attachments/assets/fadd4d9a-5369-49c1-8259-fd13a82a55f5)
 
 
 O modelo está predominantemente com altos Verdadeiros Positivos (TP) e Verdadeiros Negativos (TN) o que indica que está classificando corretamente a maioria dos casos.
 
 ## 5.2 Métricas de desempenho
-![image](https://github.com/user-attachments/assets/96655d73-0632-46fd-b5ac-b6282e8805fa)
+![image](https://github.com/user-attachments/assets/09791afd-5927-412d-98c3-2f9883aee6e3)
 
 
-
-- A Acuracia(Accuracy: mede a proporção total de previsões corretas. No caso do modelo em questão, a acuracia esta em 97% em todos os casos, o que demonstra uma boa previsibilidade. Apesar da acuracia já indicar uma boa previsibilidade é importante análisar outras métricas para entender se, de fato, o modelo esta se comportando bem.  
+- A Acuracia(Accuracy: mede a proporção total de previsões corretas. No caso do modelo em questão, a acuracia esta em 100% em quase todos os casos, o que demonstra uma boa previsibilidade. Apesar da acuracia já indicar uma boa previsibilidade é importante análisar outras métricas para entender se, de fato, o modelo esta se comportando bem.  
 - A precisão(Precision): mede a proporção de verdadeiros positivos entre todos os previstos pelo modelo, ou seja, o quão provavel é em classificar corretamente as previsões. Neste caso, o modelo demonstra uma grande capacidade, visto que esta em 96%.  
-- A Revocação(Recall): mede a força do modelo em prever um resultado positivo. No modelo em questão, a previsão esta em 98%, o que indica uma ótima previsibilidade.  
+- A Revocação(Recall): mede a força do modelo em prever um resultado positivo. No modelo em questão, a previsão esta em 98% para SVC e 100% para o restante dos algoritimos, o que indica uma ótima previsibilidade.
 - F1-Score: mede o quanto a precisão e a revocação estão sendo eficientes. No caso em questão vemos uma boa eficiência entre os dois casos.  
-
-
 
 ## 5.3 Distribuição das Classes
 ![image](https://github.com/user-attachments/assets/5cac7bd7-5ad4-498e-8ff3-7d68e038e7d8)
@@ -107,14 +104,14 @@ A distribuição de classes tem uma diferença de 6.86%, o que esta dentro do ac
 A validação cruzada tem como função testar o desempenho do modelo criado. Aqui vemos que o modelo criado está desempenhando bem, logo que a acuracia esta em 97% e o desvio padrão em 0.0029.
 
 ## 5.5 Curva ROC e AUC
-![image](https://github.com/user-attachments/assets/ced8dcd7-59f3-4f84-9a4c-17e36f3aca31)
+![image](https://github.com/user-attachments/assets/6ae49b57-e008-4ab9-91b2-d5732a0afc83)
 
 
-O modelo possui uma métrica de área sob a curva (AUC) entre 0.98 - 0.99, correspondendo a um classificador relativamente bom, logo que quanto mais próximo de 1, melhor ele é.
+O modelo possui uma métrica de área sob a curva (AUC) de 1.00, correspondendo a um classificador relativamente bom, logo que quanto mais próximo de 1, melhor ele é.
 
 # 6. Considerações Finais
 
-Foram utilizados 3 classificadores: LogisticRegression,DecisionTreeClassifier e KNeighborsClassifier. Em todos os casos houve um ótimo desempenho para todas as metricas: Accuracy, Precision, Recall e F1-Score. Também foi realizada uma validação cruzada, com uma acurácia média de 0.9794 e desvio padrão da acurácia e 0.0029. Sobre a curva ROC e AUC, também foram vistos ótimos desempenhos, logo que quanto mais proximo da esquerda e AUC mais proximo de 1, melhor desempenho ele possui. 
+Foram utilizados 5 classificadores: LogisticRegression,DecisionTreeClassifier e RandomForestClassifier, AdaBoostClassifier,GradientBoostingClassifier e SVC (Support Vector Classifier). Em todos os casos houve um ótimo desempenho para todas as metricas: Accuracy, Precision, Recall e F1-Score. Também foi realizada uma validação cruzada, com uma acurácia média de 0.9794 e desvio padrão da acurácia e 0.0029. Sobre a curva ROC e AUC, também foram vistos ótimos desempenhos, logo que quanto mais proximo da esquerda e AUC mais proximo de 1, melhor desempenho ele possui.
 
 ## 5. Fonte do DataSet
 https://archive.ics.uci.edu/dataset/73/mushroom
